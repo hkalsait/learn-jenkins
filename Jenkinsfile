@@ -2,6 +2,12 @@ pipeline {
   agent any
   
     stages {
+
+      stage ("INITIAL") {
+        steps {
+          echo "Initialize steps..."
+        }
+      }
       
       stage ("BUILD") {
         steps {
