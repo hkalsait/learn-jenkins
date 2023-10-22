@@ -1,5 +1,6 @@
-pipeline{
+pipeline {
   agent any
+  
     stages {
       
       stage ("BUILD") {
@@ -25,8 +26,5 @@ pipeline{
           echo "Cleaning up the app..."
         }
       }
-
-      
     }
 }  
-
