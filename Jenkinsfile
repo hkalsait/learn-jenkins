@@ -38,10 +38,7 @@ pipeline {
           withCredentials([
             usernamePassword(credentials: ('server-credentials'), usernameVariable: USER, passwordVariable: PWD)
             {
-              sh """
-                  echo "acceppting USER and PWD"
-                  echo "From Username:${USER} Password: ${PWD}"
-              """
+              sh "Accepting from Username:${USER} Password: ${PWD}"
             }
           ])
         }
