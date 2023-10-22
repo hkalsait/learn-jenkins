@@ -20,7 +20,7 @@ pipeline{
         }
       }
 
-      steps ("CLEANUP") {
+      stage ("CLEANUP") {
         steps {
           echo "Cleaning up the app..."
         }
