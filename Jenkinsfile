@@ -36,9 +36,9 @@ pipeline {
         steps {
           echo "deploying the app..."
           withCredentials([
-            usernamePassword(credentials: ('admin'), usernameVariable: USER, passwordVariable: PWD)
+            usernamePassword(credentials: 'admin', usernameVariable: USER, passwordVariable: PWD)
             {
-              sh "Accepting from Username:${USER} Password: ${PWD}"
+             echo "Accepting from Username:${USER} Password: ${PWD}"
             }
           ])
         }
