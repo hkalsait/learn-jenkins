@@ -1,6 +1,8 @@
 pipeline {
   agent any
-  
+  environment {
+    NEW_VERSION = '1.0.0'
+  }
     stages {
 
       stage ("INITIAL") {
@@ -10,8 +12,16 @@ pipeline {
       }
       
       stage ("BUILD") {
+      when {
+        expression {
+          BRANCH_NAME == "main" || BRANCH_NAME == "master"
+        }
+      }
         steps {
+          script {
           echo "Building the app..."
+          echo "Building the Newer Version ${NEW_VERSION}"
+          }
         }
       }
       
